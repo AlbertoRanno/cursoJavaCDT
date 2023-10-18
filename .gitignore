@@ -1,0 +1,18 @@
+/bin/
+# Carpetas generadas por el IDE
+.metadata/
+.classpath
+.project
+.settings/
+
+# Archivos generados por compilaciones y ejecuciones
+bin/
+target/
+
+# Archivos de respaldo y logs
+*.log
+*.log.*
+
+# Carpetas de dependencias
+lib/
+
