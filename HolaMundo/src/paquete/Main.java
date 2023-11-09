@@ -17,7 +17,7 @@ class Main {
 		 * vamos a acceder de manera pública
 		 */
 
-		// Se recomiendo no utilizar acentos, NI EN LOS COMENTARIOS, dado que pueden
+		// Se recomienda no utilizar acentos, NI EN LOS COMENTARIOS, dado que pueden
 		// provocar problemas al guardar el codigo, o para levantarlo desde otras
 		// herramientas
 
@@ -30,9 +30,9 @@ class Main {
 		 */
 
 		/*
-		 * Tipos de datos: Primitivos: -Enteros y -Flotantes
-		 * 
-		 * Referenciados (Tipo Object): (ej. string) -Clases -Interfases -Arrays
+		 * Tipos de datos: 
+		 * -Primitivos: -Enteros y -Flotantes
+		 * -Referenciados (Tipo Object): (ej. string) -Clases -Interfases -Arrays
 		 * 
 		 * short - int - long (enteros) float - double (flotantes - decimales) byte
 		 * (memoria pc) char (caracteres del 0 al 255) boolean (verdaderos o falsos)
@@ -99,7 +99,9 @@ class Main {
 		 * OJO, es como .NET , y no como JS, importa el orden con que se definen las
 		 * variables! Lo siguiente da error!
 		 * 
-		 * String color; System.out.println(color); color = "Rojo";
+		 * String color; 
+		 * System.out.println(color); 
+		 * color = "Rojo";
 		 * 
 		 * ¡Correcto! En el momento en que se imprime la variable, no se ha asignado aún
 		 * un valor a la variable y el compilador manda el error: variable color might
@@ -212,7 +214,7 @@ class Main {
 		 */
 
 		// Tutorial 8 switch
-		int z = 'a'; // Distingue de Mayusculas y minusculas
+		int z = 'd'; // Distingue de Mayusculas y minusculas
 		switch (z) {
 		case 'a': {
 			System.out.println("Esta es la opción a");
@@ -222,6 +224,11 @@ class Main {
 			System.out.println("Esta es la opción b");
 			break;
 		}
+		case 'c': case 'd': {
+			System.out.println("Esta es la opción para c o d");
+			break;
+		}
+			
 		default: // se ejecuta si no corresponde ninguna de las opciones anteriores
 		{
 			System.out.println("Esta opción es la opción por defecto");
