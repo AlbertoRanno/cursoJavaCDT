@@ -31,6 +31,7 @@ public class Main {
 		CarritoToyotita toyotita = new CarritoToyotita();
 		toyotita.mostrarCaracteristicas(); // Heredada de CArro
 		System.out.println(toyotita.modelo()); // Heredada de CarroTOyota
+		toyotita.nieto(); //Propia de Toyotita
 
 		/*
 		 * El polimorfismo es una de las características clave de la programación

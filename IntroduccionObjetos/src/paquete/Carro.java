@@ -21,16 +21,15 @@ public class Carro { // Por convención los nombres de clase van con Mayúsuclas
 		this.largo = 4.3;
 		this.numeroPuertas = 3;
 		this.modelo = "Fiat Uno SCR";
-		this.encendido = false;
+	    this.encendido = false; //Igualmente es el valor por defecto de los booleanos
 		// Los valores que no detallen se tomaran como null, false o cero,...
-		// dependiendo el
-		// tipo de dato.
+		// dependiendo el tipo de dato.
 		// puedo omitir el uso de "this.", pero es buena práctica usarlo
 	}
 
 	public Carro(double peso, double altura, double ancho, double largo, int numeroPuertas, String modelo) {
-		// Constructor, con argumentos, permite cambiar los valores default de las
-		// variables o propiedades de la clase
+		// Constructor, con argumentos, permite crear un objeto con distintos a los
+		// valores default de las variables o propiedades de la clase
 		// Ver que incluso el color ayuda a entender, que lo que se pasa como argumento,
 		// actualiza el valor de la propiedad
 		// SOn variables diferentes
@@ -46,12 +45,12 @@ public class Carro { // Por convención los nombres de clase van con Mayúsuclas
 	// especie de funcion, que ejecutan codigo para lograr algo
 
 	// Métodos
-	public double obtenerLargo() { // Notar que especifica el tipo de dato
-		return this.largo; // Devuelve un valor puntual
+	public double obtenerLargo() { // Notar que por Retornar algo, especifica su tipo de dato
+		return this.largo; // Devuelve un valor puntual - No lo imprime
 	}
 
 	public void mostrarCaracteristicas() {
-		// Los métodos del tipo VOID (vacío) son para ejecute varias lineas de codigo,
+		// Los métodos del tipo VOID (vacío) son para que ejecute varias lineas de codigo,
 		// como definir variables nuevas o imprimir en consola. SOn los que más se usan
 		System.out.println("\n Las características del auto son las siguientes:\n\t-Peso = " + this.peso
 				+ " Kgs\n\t-Alto = " + this.altura + " mtrs\t\t-Ancho = " + this.ancho + " mtrs\t\t-Largo = "
@@ -95,7 +94,7 @@ class CarroBMW extends Carro { // Esta nueva clase, es una especio de hijo de la
 	}
 
 	public void turbo() {
-		System.out.println("Acabas de viajar a 100 millas por hora!");
+		System.out.println("Acabas de viajar a 100 millas por hora!"); // Específico de esta clase
 	}
 
 	public void informacion() {
@@ -128,10 +127,14 @@ class CarritoToyotita extends CarroToyota {
 	public void informacion() {
 		System.out.println("Este es una versión extraña de un Toyota");
 	}
+	
+	public void nieto() {
+		System.out.println("Exclusivo del nieto");
+	}
 }
 
 /*
- * Poliformismo - Caracteristicas de POO Estable que una clase, y sus hijos,
+ * Poliformismo - Caracteristica de POO - Establece que una clase, y sus hijos,
  * pueden tener cada una, un método, con el mismo nombre, pero con código
  * distinto Y que depende desde que objeto se lo llama, cumplirá con ese código
  * específico. Ej, en las clases anteriores, metodo "informacion"

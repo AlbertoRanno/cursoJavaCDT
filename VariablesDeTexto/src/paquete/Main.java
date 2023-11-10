@@ -1,6 +1,6 @@
 package paquete;
 
-import java.io.*; //Tipear para capturar info del teclado
+import java.io.*; //Tipear para capturar info desde el teclado
 
 public class Main {
 	/*
@@ -15,8 +15,7 @@ public class Main {
 		// exterior
 		InputStreamReader in = new InputStreamReader(System.in);
 		// También necesito al siguiente objeto específico para guardar en las variables
-		// respectivas esos
-		// datos que recibe el canal desde el exterior
+		// respectivas esos datos que recibe el canal desde el exterior
 		BufferedReader buffer = new BufferedReader(in);
 
 		// Dado que pueden venir errores de escrituras desde el teclado utilizo la
@@ -54,7 +53,7 @@ public class Main {
 
 		// Vuelvo a invocar carga de info mediante el teclado:
 		System.out.println(
-				"Escriba un nuevo texto (\"texto2\") el cual será almacenado en otra celda de memoria (\"buffer2\") ");
+				"Escriba un nuevo texto  el cual será almacenado en otra variable (\\\"texto2\\\")");
 		// NO necesito un nuevo objeto: BufferedReader buffer2 = new BufferedReader(in);
 		// para almacenar lo nuevo que escriba. NO lo necesito!
 		// Dado que la funcionalidad se necesita una sola vez, y luego se guarda
@@ -69,14 +68,14 @@ public class Main {
 
 		// Convertir Strings a numero
 		System.out.println(
-				"Ingrese un numero (a priori lo tomaría a string) convertido a Integer con el que puede calcular: ");
+				"Ingrese un numero (a priori lo tomaría a string) para convertirlo a Integer y poder calcular: ");
 		int versionEnNumero = 0;
 
 		try {
 			texto3 = buffer.readLine();
 			versionEnNumero = Integer.parseInt(texto3);
 		} catch (Exception e) { // OJO - CAMBIO DE IOException a solo Exception
-			System.out.println("Debes ingresar un numero. Sin este catch, daría el error de consola");
+			System.out.println("Debes ingresar un numero. Sin este catch, si no fuera número lo que ingresa, daría el error de consola, en lugar del msj");
 		}
 		System.out.println(versionEnNumero);
 		System.out.println(versionEnNumero + 10);
