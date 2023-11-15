@@ -1,8 +1,33 @@
 package paqueteTextos;
 
-import java.io.*; //1ro importar Librería para la lectura (y tambien sirve para la escritura) de archivos
+import java.io.*; //1ro importar Librería para la lectura y tambien sirve para la escritura de archivos
 
 public class Textos {
+
+	public void escribir(String nombreArchivo) {
+		File f = new File(nombreArchivo); // crea un objeto del tipo archivo /"="/ se asigna un nombre al arhivo
+
+		// Escritura
+		try {
+			FileWriter w = new FileWriter(f); // "w" es un objeto de la clase FileWriter - FIlewriter lleva el parametro
+												// "f" que es el archivo donde va a escribir
+			BufferedWriter bw = new BufferedWriter(w); // BufferedWriter - contiene espacio en memoria, que contiene
+														// info que voy a escribir
+			PrintWriter wr = new PrintWriter(bw); // PrintWriter - La clase que escribe directamente al archivo (lo que tiene almacenado el bufferedWriter
+
+			wr.write("Esto es una linea de texto"); //Metdo para escribir
+			wr.append("\n\t - esto es una concatenacion al texto"); //Concatener
+			wr.close(); // los objetos se deben cerrar, para indicar que se detiene el flujo de datos
+			bw.close();
+		} catch (IOException e) {
+		}
+		;
+		
+		//Si quisiera que me siga escribiendo debajo, y no me reemplace cada vez lo escrito, debería:
+		//1ero leer el texto, como el metodo "leer", pero en lugar de imprimir en pantalla lo que lee
+		//deberia de guardarlo en una variable. Y luego utilizar esa variable, para escribir todo completamente,
+		//y así ir añadiendo valores al archivo
+	}
 
 	public void leer(String nombreArchivo) {
 
